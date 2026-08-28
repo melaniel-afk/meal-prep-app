@@ -108,6 +108,12 @@ export default async function RecipeDetailPage({
             >
               View Meal Plan
             </Link>
+            <Link
+              href={`/recipes/${recipe.id}/edit`}
+              className="min-h-11 px-5 rounded-full bg-[#FFFDFB] text-accent text-sm font-semibold flex items-center justify-center shadow-[inset_0_0_0_1.5px_#D8C6EC] no-underline"
+            >
+              Edit Recipe
+            </Link>
             <DeleteRecipeButton recipeId={recipe.id} recipeName={recipe.name} />
           </div>
         </div>

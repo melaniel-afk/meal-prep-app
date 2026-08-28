@@ -64,6 +64,44 @@ export async function addRecipe(input: AddRecipeInput) {
   revalidatePath("/recipes");
 }
 
+export async function editRecipe(recipeId: string, input: AddRecipeInput) {
+  const { supabase, user } = await requireUser();
+  const name = input.name.trim();
+  if (!name) return;
+
+  const ingredients = input.ingredients.split("\n").map((s) => s.trim()).filter(Boolean);
+  const instructions = input.instructions.split("\n").map((s) => s.trim()).filter(Boolean);
+
+  await supabase
+    .from("recipes")
+    .update({
+      name,
+      tag: input.tag,
+      time: input.time.trim() || "—",
+      description: input.description.trim(),
+      ingredients: ingredients.length ? ingredients : ["No ingredients listed"],
+      instructions: instructions.length ? instructions : ["No instructions added yet"],
+      prep_video_url: input.prepVideoUrl,
+      prep_video_is_video: input.prepVideoIsVideo,
+      serving_size: input.serving_size,
+      calories: input.calories,
+      total_fat_g: input.total_fat_g,
+      saturated_fat_g: input.saturated_fat_g,
+      cholesterol_mg: input.cholesterol_mg,
+      sodium_mg: input.sodium_mg,
+      total_carbs_g: input.total_carbs_g,
+      fiber_g: input.fiber_g,
+      sugars_g: input.sugars_g,
+      protein_g: input.protein_g,
+    })
+    .eq("id", recipeId)
+    .eq("user_id", user.id);
+
+  revalidatePath("/recipes");
+  revalidatePath("/recipes/" + recipeId);
+  revalidatePath("/plan");
+}
+
 export async function deleteRecipe(recipeId: string) {
   const { supabase, user } = await requireUser();
   await supabase.from("recipes").delete().eq("id", recipeId).eq("user_id", user.id);
