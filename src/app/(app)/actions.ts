@@ -64,6 +64,13 @@ export async function addRecipe(input: AddRecipeInput) {
   revalidatePath("/recipes");
 }
 
+export async function deleteRecipe(recipeId: string) {
+  const { supabase, user } = await requireUser();
+  await supabase.from("recipes").delete().eq("id", recipeId).eq("user_id", user.id);
+  revalidatePath("/recipes");
+  revalidatePath("/plan");
+}
+
 export async function addIngredientsToList(recipeId: string) {
   const { supabase, user } = await requireUser();
 

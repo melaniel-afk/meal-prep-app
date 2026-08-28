@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { TAG_STYLES, type Recipe } from "@/lib/types";
 import AddToListButton from "./AddToListButton";
+import DeleteRecipeButton from "./DeleteRecipeButton";
 import NutritionLabel from "@/components/NutritionLabel";
 
 export default async function RecipeDetailPage({
@@ -107,6 +108,7 @@ export default async function RecipeDetailPage({
             >
               View Meal Plan
             </Link>
+            <DeleteRecipeButton recipeId={recipe.id} recipeName={recipe.name} />
           </div>
         </div>
 
