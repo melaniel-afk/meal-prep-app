@@ -84,6 +84,14 @@ export default function Sidebar({ email }: { email: string }) {
         </button>
       </form>
       <div className="text-[11px] text-[#726B82] mt-3">Life OS · Meal Prep module</div>
+      <a
+        href="https://sites.google.com/view/melanie-lukehart/chronicles-of-mom"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[11px] text-[#8A7A9C] mt-1 no-underline hover:text-[#C7BDD6]"
+      >
+        ← Back to Chronicles of Mom
+      </a>
     </div>
   );
 }
