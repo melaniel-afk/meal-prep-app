@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap");
+@import "tailwindcss";
+
+:root {
+  --accent: #8e6fbe;
+  --bg: #ece6f5;
+  --sidebar: #1e1b22;
+  --ink: #3a3245;
+}
+
+@theme inline {
+  --color-accent: var(--accent);
+  --color-bg: var(--bg);
+  --color-sidebar: var(--sidebar);
+  --color-ink: var(--ink);
+  --font-script: "Dancing Script", cursive;
+  --font-sans: "Quicksand", sans-serif;
+  --font-serif: "Lora", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+}
+
+a {
+  color: #6b4fa0;
+}
+a:hover {
+  color: #4e3a78;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbbbe0;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
