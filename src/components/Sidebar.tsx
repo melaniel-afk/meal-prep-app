@@ -20,7 +20,7 @@ export default function Sidebar({ email }: { email: string }) {
   return (
     <div className="w-[250px] min-w-[250px] bg-sidebar text-[#EFE9F6] flex flex-col p-7">
       <div className="flex items-center gap-3 mb-1">
-        <div className="w-11 h-11 rounded-full bg-accent flex items-center justify-center font-script text-xl text-white flex-shrink-0">
+        <div className="w-11 h-11 rounded-full bg-accent flex items-center justify-center font-display text-xl text-white flex-shrink-0">
           M
         </div>
         <div className="flex flex-col overflow-hidden">

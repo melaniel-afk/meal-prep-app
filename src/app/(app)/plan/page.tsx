@@ -18,8 +18,8 @@ export default async function PlanPage() {
 
   return (
     <div>
-      <h1 className="font-script text-4xl font-bold text-accent mb-1">Meal Plan</h1>
-      <p className="font-serif text-sm text-[#5A5266] mb-6">
+      <h1 className="mp-title mb-1">Meal Plan</h1>
+      <p className="mp-text mb-6">
         Tap an empty slot to plan a meal, tap a planned meal to clear it, or tap the camera to log
         what you actually made and ate.
       </p>

@@ -3,10 +3,8 @@ import Link from "next/link";
 export default function DashboardPage() {
   return (
     <div>
-      <h1 className="font-script text-4xl font-bold text-accent mb-1">
-        Good to see you, Melanie
-      </h1>
-      <p className="font-serif text-[15px] text-[#5A5266] mb-9 max-w-lg">
+      <h1 className="mp-title mb-1">Good to see you, Melanie</h1>
+      <p className="mp-text mb-9 max-w-lg">
         Here&rsquo;s your Life OS. Meal Prep is fully open below — more modules are on their way.
       </p>
 
@@ -22,8 +20,8 @@ export default function DashboardPage() {
               <path d="M17 2c-1.7 0-3 1.7-3 4v3c0 1.1.9 2 2 2h1v9" />
             </svg>
           </div>
-          <span className="font-script text-2xl font-bold text-accent">Meal Prep</span>
-          <span className="font-serif text-[13px] text-[#6E6579] mt-1.5">
+          <span className="mp-heading">Meal Prep</span>
+          <span className="mp-small mt-1.5">
             Recipes, weekly planning, your shopping list, and a food diary — all in one place.
           </span>
         </Link>
@@ -37,10 +35,8 @@ export default function DashboardPage() {
               <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z" />
             </svg>
           </div>
-          <span className="font-script text-2xl font-bold text-[#8A7A9C]">Habits &amp; Health</span>
-          <span className="font-serif text-[13px] text-[#6E6579] mt-1.5">
-            Coming soon to your Life OS.
-          </span>
+          <span className="mp-heading" style={{ color: "#8A7A9C" }}>Habits &amp; Health</span>
+          <span className="mp-small mt-1.5">Coming soon to your Life OS.</span>
         </Link>
       </div>
     </div>

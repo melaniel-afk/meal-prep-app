@@ -16,8 +16,8 @@ export default async function ListPage() {
     <div className="max-w-lg">
       <div className="flex items-start justify-between gap-5 mb-6">
         <div>
-          <h1 className="font-script text-4xl font-bold text-accent mb-1">Shopping List</h1>
-          <p className="font-serif text-sm text-[#5A5266]">
+          <h1 className="mp-title mb-1">Shopping List</h1>
+          <p className="mp-text">
             {checkedCount} of {items.length} items checked off
           </p>
         </div>
@@ -35,7 +35,7 @@ export default async function ListPage() {
         if (!catItems.length) return null;
         return (
           <div key={cat} className="mb-5.5" style={{ marginBottom: 22 }}>
-            <h3 className="text-[12.5px] font-bold text-[#8A7A9C] uppercase tracking-wide mb-2.5">
+            <h3 className="mp-subheading uppercase tracking-wide mb-2.5" style={{ color: "#8A7A9C" }}>
               {cat}
             </h3>
             <div className="bg-[#FFFDFB] rounded-2xl px-4.5" style={{ paddingLeft: 18, paddingRight: 18 }}>
@@ -48,9 +48,7 @@ export default async function ListPage() {
       })}
 
       {!items.length && (
-        <p className="font-serif text-sm text-[#8A8195]">
-          Your list is empty — add ingredients from a recipe to get started.
-        </p>
+        <p className="mp-text">Your list is empty — add ingredients from a recipe to get started.</p>
       )}
     </div>
   );

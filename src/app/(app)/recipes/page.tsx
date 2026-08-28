@@ -13,8 +13,8 @@ export default async function RecipesPage() {
     <div>
       <div className="flex items-start justify-between gap-5 mb-7">
         <div>
-          <h1 className="font-script text-4xl font-bold text-accent mb-1">Recipes</h1>
-          <p className="font-serif text-sm text-[#5A5266]">
+          <h1 className="mp-title mb-1">Recipes</h1>
+          <p className="mp-text">
             Your saved recipes. Tap one to see ingredients and add them to your shopping list.
           </p>
         </div>
@@ -45,7 +45,7 @@ export default async function RecipesPage() {
                   <path d="M17 2c-1.7 0-3 1.7-3 4v3c0 1.1.9 2 2 2h1v9" />
                 </svg>
               </div>
-              <span className="font-script text-xl font-bold text-[#3A3245]">{r.name}</span>
+              <span className="mp-heading">{r.name}</span>
               <span
                 className="mt-2.5 text-[11px] font-semibold tracking-wide px-3 py-1 rounded-full"
                 style={{ background: style.bg, color: style.text }}
@@ -59,9 +59,7 @@ export default async function RecipesPage() {
       </div>
 
       {!recipes?.length && (
-        <p className="font-serif text-sm text-[#8A8195] mt-8">
-          No recipes yet — add your first one above.
-        </p>
+        <p className="mp-text mt-8">No recipes yet — add your first one above.</p>
       )}
     </div>
   );

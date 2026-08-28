@@ -11,11 +11,11 @@ export default async function LoginPage({
     <div className="min-h-screen flex items-center justify-center bg-bg px-6">
       <div className="w-full max-w-sm bg-[#FFFDFB] rounded-3xl shadow-lg p-10">
         <div className="flex flex-col items-center mb-8">
-          <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center text-white text-2xl font-script mb-3">
+          <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center text-white text-2xl font-display mb-3">
             M
           </div>
-          <h1 className="font-script text-4xl text-accent font-bold">Meal Prep</h1>
-          <p className="font-serif italic text-sm text-[#6E6579] mt-1">Your life, organized.</p>
+          <h1 className="mp-title">Meal Prep</h1>
+          <p className="mp-small mt-1">Your life, organized.</p>
         </div>
 
         {error && (

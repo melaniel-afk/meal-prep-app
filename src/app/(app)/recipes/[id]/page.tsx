@@ -40,7 +40,7 @@ export default async function RecipeDetailPage({
           </svg>
         </div>
         <div>
-          <h1 className="font-script text-3xl font-bold text-[#3A3245] m-0">{recipe.name}</h1>
+          <h1 className="mp-title" style={{ margin: 0 }}>{recipe.name}</h1>
           <div className="flex items-center gap-2.5 mt-1.5">
             <span
               className="text-[11px] font-semibold tracking-wide px-3 py-1 rounded-full"
@@ -53,29 +53,23 @@ export default async function RecipeDetailPage({
         </div>
       </div>
 
-      {recipe.description && (
-        <p className="font-serif italic text-sm text-[#5A5266] my-5">{recipe.description}</p>
-      )}
+      {recipe.description && <p className="mp-small my-5">{recipe.description}</p>}
 
       <div className="flex gap-8 flex-wrap items-start">
         <div className="flex-1 min-w-[280px]">
-          <h3 className="text-sm font-semibold text-[#3A3245] uppercase tracking-wide mb-3">
-            Ingredients
-          </h3>
+          <h3 className="mp-subheading uppercase tracking-wide mb-3">Ingredients</h3>
           <div className="bg-[#FFFDFB] rounded-2xl px-5 mb-6">
             {recipe.ingredients.map((ing, i) => (
               <div
                 key={i}
-                className="py-2.5 font-serif text-sm text-[#4A4356] border-b border-[#F0EAF7] last:border-b-0"
+                className="mp-text py-2.5 border-b border-[#F0EAF7] last:border-b-0"
               >
                 {ing}
               </div>
             ))}
           </div>
 
-          <h3 className="text-sm font-semibold text-[#3A3245] uppercase tracking-wide mb-3">
-            Instructions
-          </h3>
+          <h3 className="mp-subheading uppercase tracking-wide mb-3">Instructions</h3>
           <div className="bg-[#FFFDFB] rounded-2xl p-5 mb-6">
             {recipe.prep_video_url && (
               <div className="mb-4">
@@ -97,10 +91,8 @@ export default async function RecipeDetailPage({
             )}
             <ol className="flex flex-col gap-3 list-none m-0 p-0">
               {recipe.instructions.map((step, i) => (
-                <li key={i} className="flex gap-3 font-serif text-sm text-[#4A4356]">
-                  <span className="font-script text-lg text-accent font-bold flex-shrink-0">
-                    {i + 1}.
-                  </span>
+                <li key={i} className="flex gap-3 mp-text">
+                  <span className="mp-heading" style={{ fontSize: 16 }}>{i + 1}.</span>
                   <span>{step}</span>
                 </li>
               ))}
@@ -119,9 +111,7 @@ export default async function RecipeDetailPage({
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold text-[#3A3245] uppercase tracking-wide mb-3">
-            Nutrition
-          </h3>
+          <h3 className="mp-subheading uppercase tracking-wide mb-3">Nutrition</h3>
           <NutritionLabel n={recipe} />
         </div>
       </div>

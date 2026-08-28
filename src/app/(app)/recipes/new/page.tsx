@@ -93,7 +93,7 @@ export default function NewRecipePage() {
       <Link href="/recipes" className="text-[13px] text-accent no-underline mb-4 inline-block">
         ← Back to recipes
       </Link>
-      <h1 className="font-script text-4xl font-bold text-accent mb-6">Add a Recipe</h1>
+      <h1 className="mp-title mb-6">Add a Recipe</h1>
 
       <div className="flex flex-col gap-5">
         <div>
@@ -148,7 +148,7 @@ export default function NewRecipePage() {
         </div>
 
         <div className="bg-[#FFFDFB] rounded-2xl p-5">
-          <h3 className="text-sm font-semibold text-[#3A3245] uppercase tracking-wide mb-3">
+          <h3 className="mp-subheading uppercase tracking-wide mb-3">
             Instructions
           </h3>
           <label className={labelCls}>Steps (one per line)</label>
@@ -188,7 +188,7 @@ export default function NewRecipePage() {
         </div>
 
         <div className="bg-[#FFFDFB] rounded-2xl p-5">
-          <h3 className="text-sm font-semibold text-[#3A3245] uppercase tracking-wide mb-3">
+          <h3 className="mp-subheading uppercase tracking-wide mb-3">
             Nutrition Facts (per serving)
           </h3>
           <div className="mb-3">

@@ -51,8 +51,8 @@ export default function LogMealModal({
 
   return (
     <Modal onClose={onClose}>
-      <h2 className="font-script text-2xl text-accent mb-1">Log this Meal</h2>
-      <p className="font-serif text-[13px] text-[#8A8195] mb-5">
+      <h2 className="mp-heading mb-1">Log this Meal</h2>
+      <p className="mp-small mb-5">
         {recipeName} · {day} {slot}
       </p>
 

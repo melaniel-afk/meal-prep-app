@@ -8,8 +8,8 @@ export default function HabitsPage() {
           <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z" />
         </svg>
       </div>
-      <h2 className="font-script text-3xl text-[#8A7A9C] mb-2">Mind, Body, Soul</h2>
-      <p className="font-serif text-sm text-[#6E6579] max-w-xs">
+      <h2 className="mp-heading mb-2" style={{ color: "#8A7A9C" }}>Mind, Body, Soul</h2>
+      <p className="mp-text max-w-xs">
         Habit and wellness tracking is coming soon to your Life OS.
       </p>
       <Link href="/dashboard" className="mt-5 text-[13.5px] text-accent underline">

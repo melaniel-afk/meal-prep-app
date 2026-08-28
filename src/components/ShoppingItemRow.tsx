@@ -27,9 +27,9 @@ export default function ShoppingItemRow({ item }: { item: ShoppingListItem }) {
         )}
       </div>
       <span
-        className="font-serif text-sm"
+        className="mp-text"
         style={{
-          color: item.checked ? "#A79CB5" : "#4A4356",
+          color: item.checked ? "#A79CB5" : "#1c1c1c",
           textDecoration: item.checked ? "line-through" : "none",
         }}
       >

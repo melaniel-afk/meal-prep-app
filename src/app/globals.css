@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -13,9 +13,46 @@
   --color-bg: var(--bg);
   --color-sidebar: var(--sidebar);
   --color-ink: var(--ink);
-  --font-script: "Dancing Script", cursive;
+  --font-display: "Playfair Display", serif;
   --font-sans: "Quicksand", sans-serif;
-  --font-serif: "Lora", serif;
+}
+
+/* Type system: Title / Heading / Subheading / Normal Text / Small Text */
+.mp-title {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #804197;
+  line-height: 1.15;
+}
+.mp-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #804197;
+  line-height: 1.3;
+}
+.mp-subheading {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c1c1c;
+  line-height: 1.4;
+}
+.mp-text {
+  font-family: "Playfair Display", serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #1c1c1c;
+  line-height: 1.6;
+}
+.mp-small {
+  font-family: "Playfair Display", serif;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 400;
+  color: #1c1c1c;
+  line-height: 1.5;
 }
 
 * {

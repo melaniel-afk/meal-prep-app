@@ -22,7 +22,7 @@ function RecipeRow({
       className="cursor-pointer flex items-center gap-3 px-3 py-2.5 rounded-[10px] min-h-11 text-left disabled:opacity-60 w-full"
     >
       <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: style.color }} />
-      <span className="text-sm text-[#3A3245]">{r.name}</span>
+      <span className="mp-text">{r.name}</span>
     </button>
   );
 }
@@ -53,8 +53,8 @@ export default function RecipePickerModal({
 
   return (
     <Modal onClose={onClose}>
-      <h2 className="font-script text-2xl text-accent mb-1">Choose a Recipe</h2>
-      <p className="font-serif text-[13px] text-[#8A8195] mb-4.5" style={{ marginBottom: 18 }}>
+      <h2 className="mp-heading mb-1">Choose a Recipe</h2>
+      <p className="mp-small mb-4.5" style={{ marginBottom: 18 }}>
         for {slot} on {day}
       </p>
 
@@ -63,7 +63,7 @@ export default function RecipePickerModal({
           <RecipeRow key={r.id} r={r} pending={pending} onPick={() => pick(r.id)} />
         ))}
         {matching.length === 0 && (
-          <p className="font-serif text-sm text-[#8A8195] px-1">
+          <p className="mp-text px-1">
             No {slot} recipes yet — add one from the Recipes tab, or pick from another category
             below.
           </p>
@@ -89,7 +89,7 @@ export default function RecipePickerModal({
       )}
 
       {recipes.length === 0 && (
-        <p className="font-serif text-sm text-[#8A8195]">No recipes yet — add one from the Recipes tab.</p>
+        <p className="mp-text">No recipes yet — add one from the Recipes tab.</p>
       )}
     </Modal>
   );
